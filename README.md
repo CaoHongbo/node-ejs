@@ -7,5 +7,3 @@
 1. npm install
 2. npm start
 3. 访问 localhost:3000 即可看到 ejs 模板的渲染效果
-
-## ejs 常用语法
