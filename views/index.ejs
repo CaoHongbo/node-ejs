@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>ejs 页面</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <!-- ejs 语法 -->
+
+    <%# ejs 注释的写法 -%>
     <h1><%= title %></h1>
-    <p>EJS Welcome to <%= title %></p>
+    <p>姓名：<%= user.name %></p> <!--转义-->
+    <%- user.html %> <!--不转义-->
+    <p>年龄：<%= user.age %></p>
+    <p>性别：<%= user.sex %></p>
+    <%# ejs javascript语句 -%>
+    <p>标签：
+        <% for(var i=0; i<tags.length; i++) { %>
+          <% include ./included %>
+        <% } %>
+    </p>
+
+    <!-- <p>标签：
+        <% for(var i=0; i<tags.length; i++) { %>
+        <%-
+          include('included', {
+              i: i,
+              tags: tags
+          })
+        %>
+        <% } %>
+    </p> -->
+
+    <!-- ejs 语法 -->
   </body>
 </html>
