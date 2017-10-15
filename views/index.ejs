@@ -10,8 +10,7 @@
 
     <%# ejs 注释的写法 -%>
     <h1><%= title %></h1>
-    <p>姓名：<%= user.name %></p> <!--转义-->
-    <%- user.html %> <!--不转义-->
+    <p>姓名：<%= user.name %><!--转义--> <%- user.html %> <!--不转义--></p> 
     <p>年龄：<%= user.age %></p>
     <p>性别：<%= user.sex %></p>
     <%# ejs javascript语句 -%>
